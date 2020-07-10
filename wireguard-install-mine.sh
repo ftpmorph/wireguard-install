@@ -12,17 +12,17 @@ function addClient() {
 		ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 	fi
 
-	CLIENT_WG_IPV4="10.66.66.2"
+	CLIENT_WG_IPV4="10.69.69.2"
 	read -rp "Client's WireGuard IPv4 " -e -i "$CLIENT_WG_IPV4" CLIENT_WG_IPV4
 
 	CLIENT_WG_IPV6="fd42:42:42::2"
 	read -rp "Client's WireGuard IPv6 " -e -i "$CLIENT_WG_IPV6" CLIENT_WG_IPV6
 
-	# Adguard DNS by default
-	CLIENT_DNS_1="176.103.130.130"
+	# Internal Pi Hole DNS by default
+	CLIENT_DNS_1="10.69.69.1"
 	read -rp "First DNS resolver to use for the client: " -e -i "$CLIENT_DNS_1" CLIENT_DNS_1
 
-	CLIENT_DNS_2="176.103.130.131"
+	CLIENT_DNS_2="10.69.69.1"
 	read -rp "Second DNS resolver to use for the client: " -e -i "$CLIENT_DNS_2" CLIENT_DNS_2
 
 	CLIENT_NAME=$(
